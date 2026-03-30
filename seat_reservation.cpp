@@ -11,7 +11,7 @@ private:
     string departureTime;
     string from;
     string to;
-    string seats[32];  // empty string = available
+    string seats[32];  
 
 public:
     Bus() : busNumber(0) {
@@ -74,12 +74,11 @@ public:
     }
 };
 
-// ─── Globals ──────────────────────────────────────────────────────────────────
 const int MAX_BUSES = 10;
 Bus buses[MAX_BUSES];
 int busCount = 0;
 
-// ─── Helper: find bus index by number ─────────────────────────────────────────
+// ─── Helper ─────────────────────────────────────────
 int findBus(int busNumber) {
     for (int i = 0; i < busCount; i++)
         if (buses[i].getBusNumber() == busNumber)
@@ -87,7 +86,6 @@ int findBus(int busNumber) {
     return -1;
 }
 
-// ─── Menu Functions ───────────────────────────────────────────────────────────
 void createBusRoute() {
     if (busCount >= MAX_BUSES) {
         cout << "Maximum bus limit reached!\n";
@@ -164,7 +162,6 @@ void showAvailableBuses() {
     cout << "========================================================================\n";
 }
 
-// ─── Main ─────────────────────────────────────────────────────────────────────
 int main() {
     int choice;
     cout << "==============================\n";
