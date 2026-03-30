@@ -78,7 +78,6 @@ const int MAX_BUSES = 10;
 Bus buses[MAX_BUSES];
 int busCount = 0;
 
-// ─── Helper ─────────────────────────────────────────
 int findBus(int busNumber) {
     for (int i = 0; i < busCount; i++)
         if (buses[i].getBusNumber() == busNumber)
